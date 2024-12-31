@@ -1,0 +1,645 @@
+MODULE 2 - INTODUCTION TO PROGRAAMING :
+
+1. Overview of C Programming :
+
+                                                              * THEORY EXERCISE *
+ * write an essay covering the history and evolution of c programming. Explain its importance and why it is still used today.
+ 
+--> C is one of the most influential programming languages in the history of computing. Created in the early 1970's it revolutionized the way software was developed, setting the foundation for many modern programming languages. Its efficiency, portability, and simplicity have ensured its relevance for over five decades, making it a cornerstone of computer science education and software development.   
+
+--> HISTORY OF C : The journey of C began in the late 1960's at bell labs. Dennis Ritchie, along with ken Thompson, created C as a response to the limitations of existing languages like B and BCPL(Basic combined programming languages). B, developed by Ken Thompson, was a type less language primarily use for system programming. however, its limitations in handling data types and structures prompted Ritchie to create C in 1972, incorporating the best features of b while adding new functionalities.
+
+--> EVOLUTION OF C : After its inception, C rapidly gained popularity among developers for its flexibility and efficiency. In 1978, Brian Kernighan and Dennis Ritchie published The C Programming Language, often referred to as "K&R C." This book became the de facto standard for the language and introduced many to its powerful capabilities.
+
+--> In the 1980s, the American National Standards Institute (ANSI) established a standardized version of C, known as ANSI C or C89, to address inconsistencies in the language's implementation. This standard ensured compatibility across various platforms and compilers, solidifying C's position as a universal programming language. Subsequent updates, such as C99, C11, and C18, introduced features like better support for floating-point arithmetic, multi-threading, and improved syntax.
+
+--> IMPORTANCE OF C : C's design philosophy prioritizes efficiency and control. Its low-level capabilities, such as direct memory manipulation, make it an ideal choice for system-level programming, embedded systems, and real-time applications. Additionally, its simplicity and small runtime footprint enable it to be used on hardware with limited resources.
+
+--> WHY C IS USED TODAY :
+  1.Performance: C offers unparalleled performance, making it the preferred choice for applications requiring high efficiency, such as operating systems, database engines, and game development.
+
+  2.Control: Unlike higher-level languages, C gives developers direct control over hardware and memory, which is vital for resource-constrained systems.
+
+  3.Foundation for Learning: Learning C helps programmers understand fundamental programming concepts, such as pointers, memory management, and data structures, which are essential for mastering more advanced languages.
+
+  4.Legacy Code: A significant amount of existing software is written in C. Maintaining and updating these systems requires knowledge of the language.
+
+  5.Wide Usage: C continues to dominate in fields like embedded systems, where hardware-specific programming is required.
+
+
+                                                                        * LAB EXERCISE  * Research and provide three real-world applications where C programming is 
+extensively used, such as in embedded systems, operating systems, or game 
+development. 
+
+
+--> C programming is to play pivotal role in various industries due to its efficiency, portability, and low-level hardware access.
+ 
+  1.EMBEDDED SYSTEMS : C is the go-to language for developing embedded systems due to its ability to interact closely with hardware. It is used in devices like microwaves, coffee makers, automotive systems (e.g., anti-lock brakes, tire pressure sensors, and cruise control), and IoT devices. C's efficiency allows developers to write code that operates with minimal resources, a critical requirement for embedded systems with limited memory and processing power.
+
+  2.OPERATING SYSTEMS : Many major operating systems are written in C or heavily rely on it. For example, the Linux and Windows kernels are largely written in C. This is because C provides direct memory management capabilities and system-level access, making it ideal for tasks like managing hardware resources and executing system calls​.
+
+  3.GAME DEVLOPMENT : While modern game development often uses high-level languages or engines, C is still foundational for developing game engines and performance-critical components. Notable games and engines like Doom and parts of Unreal Engine rely on C for handling graphics rendering, physics simulations, and memory management. Its high performance ensures smooth gameplay, even on resource-constrained platforms​.
+
+
+
+2. SETTING UP ENVIRONMENT :
+                                              * THEORY EXERCISE *
+* Describe the steps to install a C compiler (e.g., GCC) and set up an Integrated 
+Development Environment (IDE) like DevC++, VS Code, or CodeBlocks. 
+
+--> STEP 1. To install C compiler we have to install MinGW(minimalist GNU for windows):
+   
+    1.download the installer from MinGW official site.
+    2.Run the installer and select gcc from the "basic setup"section.
+    3.Add the bin directory(e.g, C: MinGW\bin) to the system PATH.
+    4.open a terminal and verify the installation.
+
+
+ --> STEP 2. how to download devlopment ENvironment like VS code.
+
+  --> To install VS code : we have to go to Visual Studio official site and download VS code.
+      -> Install C/C++ extension :
+      -> TO install C extension open VScode and go to extension and search C/C++ by microsoft and install it.
+
+ --> Step 3. Test your setup :
+
+      -> open your VScode.
+      -> create a new file (e.g., hello.c) and print "hello world".    
+
+ 
+                                                          * LAB EXERCISE *
+* Install a C compiler on your system and configure the IDE.Write your first program to print "hello World!" and run it.
+
+--> #include<stdio.h>
+    int main()
+   {
+    printf("hello world");
+
+     return 0;
+    }
+
+3. BASIC STRUCTURE OF A C PROGRAM
+                                                    * THEORY EXERCISE *
+* Explain the basic structure of a C program, including headers,main function,comments,data types,and variables.Provide examples.                                                        
+
+--> The structure of a basic C program consists of several components,including headers,the main function,comments,data types,and variables.
+
+   -> 1. Header Files:
+     > header file contains defitions of function and macros that you we can use in our program.
+      > <stdio.h> : for input/output functions like "printf" and "scanf".
+      > <stdlib.h> : for memory allocation and process control.
+      > <string.h> : for string manipulation.
+
+  -> EXAMPLE : #include <stdio.h>  Includes the standard input/output functions. 
+
+   -> 2. MAIN FUNCTION :
+     > The main function is the entry point of a C program. It starts after header file.
+
+  ->  EXAMPLE : #include<stdio.h>
+                int main(){
+                return 0;
+                } 
+    > The return 0; indicates successfull program termination.      
+  
+  -> 3. COMMENTS :
+    > comments are used to document the code and make it easier to understand.They are ignored by the compiler.
+    > single line comments are starts withg //.
+    > Multi line comments starts and closed between /**/ and . 
+
+  -> 4. DATA TYPES :
+    > Data types specify the types of data a variable can hold.
+    > common data types :
+     
+     > int : for integers.
+     > float : for floating point numbers.Float is used for decimal numbers. 
+     > char : for single characters.it only accept single characters.    
+     > double : for double precision floating point numbers.
+     > void : for functions that do not return a value.
+
+   
+  -> EXAMPLE : int age = 25;
+               float temperature = 43.5;
+               char grade = 'A'; single cot is compulsary in char datatype.
+               double pi = 3.141;
+
+  -> 5.VARIABLES :
+    > variables are used to store data values.
+    > they must be declared with a specific data type before use.
+    > a variables name must start with a letter or underscore and can contain letters,digits,and underscore.            
+ 
+                                                        * LAB EXERCISE *
+* Write a C program that includes variables, constants, and comments. Declare 
+and use different data types (int, char, float) and display their values.
+
+#include<stdio.h>
+int main()
+{
+  int a = 10;
+  char grade = 'A';
+  float b = 1.145;
+
+  printf("%d\n",a);
+  printf("%c\n",grade);
+  printf("%f\n",b);
+  return 0;
+}
+
+4. OPERATORS IN C 
+                                      * THEORY EXERCISE *
+*  Write notes explaining each type of operator in C: arithmetic, relational, 
+logical, assignment, increment/decrement, bitwise, and conditional operators.                                     
+
+1 > Arithmetic operator : 
+  > The operators perform basic mathematical operation like. 
+  > '+' - addition, 
+  > '-' - subtraction,
+  > '*' - multiplication,
+  > '/' - divison,
+  > '%' - modulus (Remainder when a is divided by b).
+
+2 > Relational operator :
+  > The relational operators compare two values and return 1 (true) and 0 (false).
+  > '==' - equal to (a == b(true if a equals to b))
+  > '!=' - not equal to (a != b(true if a is not equal to b))
+  > '<'  - less than (a < b(true if a less than b))
+  > '>'  - greater than (a > b(true if a is greater than b))
+  > '<=' - less than or equal to (a <= b(true if a is less than or equal to b))
+  > '>=' - greater than or equal to (a >= b(true if a is greater than or equal to b))
+
+3 > Logical operator :
+  > These operators are used to combine multiple conditions.
+  > '&&' - Logical AND example: a = 1, b = 1 (a > 3) && (b > 2) (true if both conditions are true)
+  > '!' - Logical NOT  example: a = 5, b = 10 (a != b) (true if a is not equal to b)
+  > '||' - Logical OR  example: a = 5, b = 10 (a > 4) || (b > 11) (true if atleast one condition is true)
+
+4 > Assignment operator :
+  > =	Assign	a = b (Assigns b to a)
+  > +=	Add and assign	a += b (Equivalent to a = a + b)
+  > -=	Subtract and assign	a -= b (Equivalent to a = a - b)
+  > *=	Multiply and assign	a *= b (Equivalent to a = a * b)
+  > /=	Divide and assign	a /= b (Equivalent to a = a / b)
+  > %=	Modulus and assign	a %= b (Equivalent to a = a % b)
+ 
+5 > Increment/Decrement operator :
+  > these operator increases or decreases value by 1.
+  > '++' increment by 1
+  > '--' decrement by 1 
+
+6 > Bitwise operator : 
+  > bitwise operator perform operations on binary represent of number.
+  > '&' Bitwise AND 
+  > '|' Bitwise OR
+  > '~' Bitwise NOT
+  > '<<' Bitwise LEFT SHIFT
+  > '>>' Bitwise RIGHT SHIFT	
+
+7 > conditional(ternary)operator :
+  > ?: Example : a = 10,b = 20; (a > b) ? a : b;
+                                 
+                                             * LAB EXERCISE *
+* Write a c program that accepts two integers from the user and performs arithmetic, relational, and logical operators on them. Display the results.
+
+> ARITHMETIC OPERATOR : // (+,-,*,/,%)
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("enter the value of a : ");
+    scanf("%d",&a);
+    printf("enter the value of b : ");
+    scanf("%d",&b);
+
+   printf("a + b is %d\n",a + b);
+   printf("a - b is %d\n",a - b);
+   printf("a * b is %d\n",a * b);
+   printf("a / b is %d\n",a / b);
+   printf("a modulo b is %d\n",a % b);
+
+    return 0; }
+   
+ > output : enter the value of a : 12
+            enter the value of b : 3
+            a = 12, b = 3;
+            a + b = 15;
+            a - b = 9;
+            a * b = 36;
+            a / b = 4;
+            a % b = 0;
+
+> RELATIONAL OPERATOR :// ( == ,!=, <,>,<=,>=)
+
+ #include<stdio.h>  
+int main()
+{  int a,b;
+    printf("enter the value of a : ");
+    scanf("%d",&a);
+    printf("enter the value of b : ");
+    scanf("%d",&b);
+
+    printf("a == b is %d\n",a == b);
+    printf("a != b is %d\n",a != b);
+    printf("a < b is %d\n",a < b);
+    printf("a > b is %d\n",a > b);
+    printf("a <= b is %d\n",a <= b);
+    printf("a >= b is %d\n",a >= b);
+           
+    return 0;}
+
+output :enter the value of a : 12
+        enter the value of b : 3
+        a == b is 0
+        a != b is 1
+        a < b is 0
+        a > b is 1
+        a <= b is 0
+        a >= b is 1
+
+> LOGICAL OPERATOR : // (&&,||,!)
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("enter the value of a : ");
+    scanf("%d",&a);
+    printf("enter the value of b : ");
+    scanf("%d",&b);
+
+     printf("(a > b) && (b < a) answer is  %d\n",(a > b) && (b < a));
+     printf("(a > b) || (b < a) answer is  %d\n",(a > b) || (b < a));
+     printf("(a > b) ! (b < a) answer is  %d\n",(a > b) != (b < a));
+     
+    return 0;}
+ 
+output :enter the value of a : 12
+        enter the value of b : 3
+        (a > b) && (b < a) answer is  1
+        (a > b) || (b < a) answer is  1
+        (a > b) ! (b < a) answer is  0
+
+
+5. CONTROL FLOW STATEMENT IN C :
+                                                             * THEORY EXERCISE *
+* Explain decision making statements in C (If,else,nested if- else,switch).provide examples of each.
+
+ -> A decision control structure in C is used to control the flow of execution in a program based on conditions. It allows the program to make decisions and execute certain parts of code depending on whether a specified condition is true or false.
+
+> types of decision control structure in c : 
+  1.if statement
+  2.if-else statement
+  3.nested if statement
+  4.else-if ladder
+  5.switch statement
+    
+  >> if statement : the if statement executes a block of code if the condition is true.
+   > #include <stdio.h>
+
+    int main() {
+    int num = 10;
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    }
+
+    return 0;}
+
+  >> if-else statement : the if else statement provides an alternative block of codes to execute when the condition is false.
+    > #include <stdio.h>
+
+int main() {
+    int num = -5;
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else {
+        printf("The number is not positive.\n");
+    }
+
+    return 0;}
+   
+    >> nested if statement : if statement can be nested inside other if or else blocks to handle more complex conditions.
+       > #include <stdio.h>
+
+int main() {
+    int num = 5;
+
+    if (num > 0) {
+        if (num % 2 == 0) {
+            printf("The number is positive and even.\n");
+        } else {
+            printf("The number is positive and odd.\n");
+        }
+    }
+
+    return 0;}
+
+   >> switch statement :switch statement is used to select one of many blocks of code to execute, based on the value of a variable or expression.
+    > #include <stdio.h>
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+
+    return 0;}
+                                  
+                                                                                * LAB EXERCISE *
+* Write a C program to check if a number is even or odd using an if-else statement. Extend the program using a switch statement to display the month name based on the user’s input (1 for January, 2 for February, etc.) 
+
+>> #include<stdio.h>
+int main()
+{
+    int num;
+    int month;
+    printf("enter the number :");
+    scanf("%d",&num);
+
+    if(num % 2 == 0){
+        printf("it is a even number\n");
+    }  else if (num){
+        printf("it is odd number");
+    } 
+    printf("enter month : ");
+    scanf("%d",&month);
+    switch(month){
+    case 1:printf("january\n");
+    break;
+    case 2:printf("february\n");
+    break;
+    case 3:printf("march\n");
+    break;
+    case 4:printf("april\n");
+    break;
+    case 5:printf("may\n");
+    break;
+    case 6:printf("june\n");
+    break;
+    case 7:printf("july\n");
+    break;
+    case 8:printf("august\n");
+    break;
+    case 9:printf("september\n");
+    break;
+    case 10:printf("october\n");
+    break;
+    case 11:printf("november\n");
+    break;
+    case 12:printf("december\n");
+    break;
+    }
+    return 0;}
+
+6. LOOPING IN C
+                                                                  * THEORY EXERCISE *
+* Compare and contrast while loops, for loops, and do-while loops. Explain the scenarios in which each loop is most appropriate. 
+
+>> While loops : A while loop executes as long as its condition evaluates to true. The condition is checked before the loop body runs. 
+
+>> For loops : a for loop is typically used for iterating over a range or sequence and includes initialization,condition checking, and increment/decrement in one statement.
+
+>> DO-while loops : a do while loop executes the code block at least once because the condition after the loop body runs.
+
+>>> Scenarios : 
+       >> while loop : useful when the loop termination condition depends on external factors,like waiting for user input or a specific event.
+
+       >> for loop Ideal for iterating a fixed or predictable number of times,such aws traversing arrays,lists,or performing tasks in a controlled manner.
+
+        >> Do while loop : Appropriate when the code block must run at least once, such as in interactive menusm or intial value prompts.
+ 
+                                                          * LAB EXERCISE *
+*  Write a C program to print numbers from 1 to 10 using all three types of loops (while, for, do-while).
+
+  >> For loop : #include<stdio.h>
+                int main()
+                {   int i;
+                for (i = 1; i <= 10; i++)
+                printf("%d\n",i);
+                return 0;}
+
+  >> while loop :#include<stdio.h>
+                 int main()
+                 {
+                 int i = 1;
+                 while(i <= 10){
+                 printf("%d\n",i);
+                 i++;
+                  }
+                 return 0;}
+
+   >> Do while loop :#include<stdio.h>
+                     int main()
+                     {
+                     int i = 1;
+                     do {
+                     printf ("%d\n", i);
+                     i++;}
+                     while (i <= 10); 
+                     return 0;}
+
+7.LOOP CONTROL STATEMENTS 
+                                                           * THEORY EXERCISE *
+* Explain the use of break, continue, and goto statements in C. provide examples of each.
+ 
+  >> break statement : Terminates the execution of the nearest enclosing loop(for, while, or do while loop) or a switch statement and transfer control to the statement immediately following the loop or switch.  
+  >>> Example : #include <stdio.h>
+                int main() {
+                for (int i = 1; i <= 10; i++) {
+                if (i == 5) {
+                break; // Exit the loop when i equals 5
+                }
+                printf("%d\n", i);
+                }
+                return 0;}
+
+   >> continue statement : skips the current iteration of the loop and proceeds with the next iteration. 
+    >>> Example : #include<stdio.h>
+                  int main()
+                  {
+                  for( int i = 1; i <= 10; i++){
+                  if (i == 5){
+                  continue;;
+                   }
+                   printf("%d\n",i);
+                   }
+                   return 0;}
+
+>> Goto statement : Transfers control unconditionally to a labeled statement elsewhere in the program.
+   >>> Example :   #include<stdio.h>
+                   int main()
+                   {
+                   int i = 1;
+                   start:
+                   printf("%d\n",i);
+                   i++;
+                   if(i <= 10){
+                   goto start;
+                   }   
+                   return 0;}
+
+                                                         * LAB EXERCISE *
+* Write a C program that uses the break statement to stop printing numbers 
+when it reaches 5. Modify the program to skip printing the number 3 using the 
+continue statement.
+ 
+>>   #include<stdio.h>
+     int main()
+     {
+     for(int i = 1; i <= 10; i++){
+        if(i == 3){
+            continue;
+        }if (i == 6){
+            break;
+        }
+        printf("%d\n",i);
+    }
+    return 0;}
+
+8.FUNCTIONS IN C
+                                          * Theory exercise *
+*  What are functions in C? Explain function declaration, definition, and how to call a function. Provide examples.
+
+>> function in c is a block of code that performs a specific task.Functions promote code reusability, modular programming, and better readability.in C, every program musrt have a special function called main(), where execution begins. 
+>> there are three functions : 1. declaration function
+                              2. definition function
+                              3. calling function
+
+1. Declaration(prototype) : specifies the function name, return type, and parameters.
+                           allows the compiler to know about the function before it is used.   
+2.Definition : provides the actual implementation of the function.
+               contains the code of block that performs the function's task.
+
+3.calling : transfer control tmo the function by its name and provides the require arguments.
+
+   >>> Example : #include<stdio.h>
+                 int add (int a, int b); // declarartion function 
+                 int main()
+                 {
+                int num1 = 2; int num2 = 5;
+                int result = add(num1,num2); // call function
+                printf("the sum is %d\n",result); 
+    
+                return 0;}
+                // function body
+                int add (int a,int b){
+                return (a + b);}
+
+                                                               * LAB EXERCISE *
+* Write a C program that calculates the factorial of a number using a function. Include function declaration, definition, and call. 
+ 
+>> #include<stdio.h>
+   int factorial (int n);
+   int main()
+   {    
+    int num;
+    printf("enter a number");
+    scanf("%d",&num);
+
+    if(num < 0){
+        printf("factorial is not defined for negative number.\n");
+
+    }else{
+        int result = factorial(num);
+        printf("the factorial number of %d is : %d\n",num,factorial(num));
+    }
+     return 0;
+    }
+    int factorial (int n){
+    int fact = 1;
+    for(int i = 1; i <= n; i++){
+        fact = fact * i;
+    }
+    return fact;}
+
+9.FUNCTIONS IN C
+                              * theory exercise *
+* Explain the concept of arrays in C. Differentiate between one-dimensional and 
+multi-dimensional arrays with examples.
+
+>> An Array in C is a collection of variables of the same type stored in contiguous memory locations. Array allow you to manage large sets of data efficiently using a single identifier and an index to access individual elements. 
+
+ >> types Of arrays in c : 1.one dimensional array
+                           2.multi dimensional array
+
+  1. One dimensional array : a 1D array is a linear list of elements of the same type.
+  2. Multi dimensional array : a multi dimensional array can represent data in a grid or matrix form, with multiple levels of indexing
+ 
+   >>> Example pf one dimensional array : #include<stdio.h>
+                                          int main()
+                                          int arr[5] = {10,20,30,40,50};
+
+                                          for (int i = 0; i < 5; i++){
+                                          printf("elements %d : %d\n",i, arr[i]);}
+
+                                          return 0;}
+
+
+	>>> Example of multi dimensional array : #include<stdio.h>
+                                                 int main()
+                                                 {
+                                                 int matrix[2][3] = {{1,2,3},{4,5,6}};
+
+                                                 for (int i = 0; i < 2; i++){
+                                                 for(int j = 0; j < 3; j++){
+                                                 printf("elements [%d][%d] : %d\n",i,j, matrix[i][j]);
+                                                 }
+                                                 }    
+                                                 return 0;}
+
+                                         * LAB EXERCISE *
+* Write a C program that stores 5 integers in a one-dimensional array and prints them. Extend this to handle a two-dimensional array (3x3 matrix) and calculate the sum of all elements.
+
+>>> #include <stdio.h>
+
+ int main() {
+     int arr[5];
+       int matrix [3][3];
+       int sum = 0;
+
+    // Input: Storing 5 integers in the array
+    printf("Enter 5 integers:\n");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Output: Printing the stored integers
+    printf("The integers in the array are:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }printf("\n");
+
+    // Two dimensional array
+   printf("enter integers  by 3 * 3 matrix :\n ");
+     for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            scanf("%d",&matrix[i][j]);
+        }
+     }
+     printf("the 3 * 3 matrix is :\n");
+     for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("%d",matrix[i][j]);
+            sum = sum + matrix[i][j];
+        }
+       }
+     printf("the sum of elements is %d\n",sum);
+     return 0;
+}
+
+10.POINTERS IN C
+                                                                    * theory exercise *
+* Explain what pointers are in C and how they are declared and initialized. Why are pointers important in C?
+
+   >> A pointer in C is a variable that stores the memory address of another variable.They are a powerful feature in C, enabling direct memory access and manipulation, whic make C a very flexible and efficient programming language.
